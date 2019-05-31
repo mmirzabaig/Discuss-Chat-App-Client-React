@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { socket } from '../../index';
 import {Form, Button} from 'semantic-ui-react';
+import AudioVideo from './AudioVideo';
 class DisplayPrivateChat extends Component {
   constructor(props){
     super(props);
@@ -33,8 +34,8 @@ class DisplayPrivateChat extends Component {
       <div>
         <Form onSubmit={this.handleSubmit}>
           <Form.Input type='text' value={this.state.messageValue} onChange={this.handleChange}/>
-          <Button type='submit'>Submit</Button>
         </Form>
+        <AudioVideo roomID={this.props.roomID}/>
         <ul>
           {messages}
         </ul>

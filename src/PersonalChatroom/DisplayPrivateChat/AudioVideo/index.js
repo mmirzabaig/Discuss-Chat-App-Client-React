@@ -26,7 +26,6 @@ class AudioVideo extends Component {
 
   componentDidMount() {
     socket
-      .on('init', data => this.setState({ clientId: data.id }))
       .on('request', data => this.setState({ callModal: 'active', callFrom: data.from }))
       .on('call', (data) => {
         if (data.sdp) {
@@ -35,7 +34,6 @@ class AudioVideo extends Component {
         } else this.pc.addIceCandidate(data.candidate);
       })
       .on('end', this.endCall.bind(this, false))
-      .emit('init');
   }
 
   startCall(isCaller, friendID, config) {
