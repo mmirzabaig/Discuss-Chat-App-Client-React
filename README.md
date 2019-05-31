@@ -6,9 +6,10 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 # Chat App
-A User-friendly platform to locate breweries in and around Austin, TX and also give locations to nearby places to get tacos.
+Peer to peer chat application.
 
-## Link to Site
+## Link to Original(older) Repo
+https://github.com/mmirzabaig/chat-app-react
 
 ## Languages Used
 - HTML
