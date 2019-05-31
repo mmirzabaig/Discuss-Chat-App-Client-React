@@ -68,7 +68,7 @@ class AudioVideo extends Component {
 
   render() {
     return (
-      <div >
+      <div>
         <MainWindow
           clientId={this.state.clientId}
           startCall={this.startCallHandler}
@@ -87,7 +87,7 @@ class AudioVideo extends Component {
           rejectCall={this.rejectCallHandler}
           callFrom={this.state.callFrom}
         />
-      </div >
+      </div>
     );
   }
 }
