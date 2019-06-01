@@ -17,15 +17,15 @@ class CallModal extends Component {
         <button
           className="btn-action fa fa-video-camera"
           onClick={this.acceptWithVideo(true)}
-        />
+        >Accept With Video</button>
         <button
           className="btn-action fa fa-phone"
           onClick={this.acceptWithVideo(false)}
-        />
+        >Accept Without Video</button>
         <button
           className="btn-action hangup fa fa-phone"
           onClick={this.props.rejectCall}
-        />
+        >Reject Call</button>
       </div>
     );
   }

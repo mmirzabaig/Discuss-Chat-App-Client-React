@@ -34,6 +34,7 @@ class AudioVideo extends Component {
         } else this.pc.addIceCandidate(data.candidate);
       })
       .on('end', this.endCall.bind(this, false))
+      .emit('init');
   }
 
   startCall(isCaller, friendID, config) {

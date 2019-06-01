@@ -12,17 +12,24 @@ class MainWindow extends Component {
    constructor(props) {
      super(props);
      this.state = {
-
+       friendID: ''
      }
    }
+
+   handleChange = (e) => {
+     this.setState({
+       [e.currentTarget.name]: e.currentTarget.value
+     })
+     console.log(e.currentTarget.value)
+   }
+
   callWithVideo(video) {
     const config = { audio: true };
     config.video = video;
-    return () => this.props.startCall(true, friendID, config);
+    return () => this.props.startCall(true, this.state.friendID, config);
   }
   render() {
     const { clientId } = this.props;
-    document.title = `${clientId} - VideoCall`;
     return (
       <div className="container main-window">
         <div>
@@ -33,13 +40,7 @@ class MainWindow extends Component {
           <h4>Get started by calling a friend below</h4>
         </div>
         <div>
-          <input
-            type="text"
-            className="txt-clientId"
-            spellCheck={false}
-            placeholder="Your friend ID"
-            onChange={event => friendID = event.target.value}
-          />
+          <input type='text' placeholder='friendID' name='friendID' onChange={this.handleChange} />
           <div>
             <button
               className="btn-action fa fa-video-camera"
