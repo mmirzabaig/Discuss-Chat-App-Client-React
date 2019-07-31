@@ -7,6 +7,25 @@ const subscribeToTimer = async (cb) => {
   await console.log(data, 'fej;oiawjefo;iawjho;iawj;oiawjfe;onafewoeowa');
   })
 
+
+  let time = new Date();
+  // console.log(time.getUTCHours() + ':' + time.getUTCMinutes());
+  let utcTime = time.getUTCHours() + ':' + time.getUTCMinutes();
+
+  console.log(utcTime, '123')
+
+  socket.on('time', async (data) => {
+    time = new Date()
+    utcTime = time.getUTCHours() + ':' + time.getUTCMinutes();
+
+    time = time.toLocaleTimeString();
+
+    socket.emit('localTime', {time: time, utcTime: utcTime})
+  })
+
+ 
+
+
  await socket.emit('subscribeToTimer', 1000);
 }
 export { subscribeToTimer };

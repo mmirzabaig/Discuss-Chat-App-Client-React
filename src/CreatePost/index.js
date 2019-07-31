@@ -36,6 +36,10 @@ class CreatePost extends Component {
   }
 
   render(){
+
+
+
+
     const buttonStyle =  {
       display: 'flex',
       color: 'white',
