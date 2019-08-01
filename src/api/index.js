@@ -16,9 +16,12 @@ const subscribeToTimer = async (cb) => {
 
   socket.on('time', async (data) => {
     time = new Date()
-    utcTime = time.getUTCHours() + ':' + time.getUTCMinutes();
+
+    let utcTime = time.getUTCHours() + ':' + time.getUTCMinutes();
 
     time = time.toLocaleTimeString();
+
+
 
     socket.emit('localTime', {time: time, utcTime: utcTime})
   })
