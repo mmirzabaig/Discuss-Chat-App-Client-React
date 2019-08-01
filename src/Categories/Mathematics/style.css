@@ -1,0 +1,47 @@
+.chatbox {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+.chatboxContainer {
+  color: black;
+  background-color: yellow;
+  border: 5px solid black;
+  height: 600px;
+  width: 400px;
+}
+
+.chatboxContainerHeading {
+  color: darkblue;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+
+.categoryContainer {
+  color: white;
+  background-color: black;
+  border: 5px solid yellow;
+  height: 600px;
+  width: 400px;
+}
+
+.categoryContainerText {
+  display: flex;
+  margin-left: 4%;
+  font-size: 20px;
+  margin: 10%;
+}
+
+.categoryContainerHeading {
+  color: purple;
+  margin-bottom: 0;
+  font-size: 50px;
+}
+
+.button {
+  font-size: 50px;
+  display: flex;
+  color: black;
+  border-radius: 50%;
+}
