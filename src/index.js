@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import io from 'socket.io-client';
 
 
-export const socket = io.connect('http://localhost:8080');
+export const socket = io.connect('http://35.232.67.49:8080');
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 
