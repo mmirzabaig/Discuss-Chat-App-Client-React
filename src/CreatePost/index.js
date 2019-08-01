@@ -28,7 +28,23 @@ class CreatePost extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      socket.emit('createNewPost', this.state)
+      await console.log(this.state.date + 'T' + this.state.time);
+      let newDate = await new Date(this.state.date + 'T' + this.state.time);
+      let bMonth = await Number(newDate.getUTCMonth()) + 1;
+
+
+     await console.log(newDate.getUTCMinutes(), newDate.getUTCHours(), newDate.getUTCDate(), (Number(newDate.getUTCMonth()) + 1).toString());
+      let cronTime = await (newDate.getUTCMinutes() + ' ' + newDate.getUTCHours() + ' ' +  newDate.getUTCDate() + ' ' +  bMonth.toString() + ' *');
+    
+      let cronDestroyTime = ((newDate.getUTCMinutes() + 2 ) + ' ' + newDate.getUTCHours() + ' ' +  newDate.getUTCDate() + ' ' +  bMonth.toString() + ' *');
+      await this.setState({
+        newDate: newDate,
+        bMonth: bMonth, 
+        cronTime: cronTime,
+        cronDestroyTime: cronDestroyTime
+      })
+      await console.log(this.state, 'STATE FUCKER')
+      await socket.emit('createNewPost', this.state)
     } catch (err) {
       console.log(err);
       return(err);
@@ -84,6 +100,8 @@ class CreatePost extends Component {
     const radioStyle = {
       marginLeft: '10px',
     }
+
+
 
     return(
       <Modal trigger={<Button color='black' style={buttonStyle}>Create A Post</Button>}>
