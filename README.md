@@ -41,4 +41,7 @@ https://github.com/mmirzabaig/chat-app-react
 ![alt text](./public/images/messages.png "Logo Title Text 1")
 ![alt text](./public/images/signup.png "Logo Title Text 1")
 ![alt text](./public/images/mainChatRoom.png "Logo Title Text 1")
+<<<<<<< HEAD
 # disscuss-app-react
+=======
+>>>>>>> d8aefad3f66adfd2bdd0d6ad3901e7a3193268ed
