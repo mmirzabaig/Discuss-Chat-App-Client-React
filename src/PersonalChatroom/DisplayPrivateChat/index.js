@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { socket } from '../../index';
-import {Form, Button} from 'semantic-ui-react';
-import AudioVideo from './AudioVideo';
+import {Form} from 'semantic-ui-react';
+// import AudioVideo from './AudioVideo';
 class DisplayPrivateChat extends Component {
   constructor(props){
     super(props);

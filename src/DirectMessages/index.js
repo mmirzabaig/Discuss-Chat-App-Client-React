@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { socket } from '../index';
-import { Card, Icon, Image } from 'semantic-ui-react'
 import ViewDirectMessages from '../ViewDirectMessages';
 
 class DirectMessages extends Component {

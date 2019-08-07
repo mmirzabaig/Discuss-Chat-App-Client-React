@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Button, Header, Image, Modal, Input, Form } from 'semantic-ui-react';
+import React from 'react'
+import { Button, Header, Modal, Form } from 'semantic-ui-react';
 import { socket } from '../../../index.js';
 import swal from 'sweetalert';
 

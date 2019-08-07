@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Header, Image, Modal, Input, Form, Dropdown } from 'semantic-ui-react'
+import { Button, Header, Modal, Input, Form } from 'semantic-ui-react'
 import { socket } from '../index';
 import swal from '@sweetalert/with-react';
 
@@ -73,33 +73,33 @@ class CreatePost extends Component {
       width: '300px'
     }
 
-    const durationOptions = [
-  {
-    key: '15',
-    text: '15',
-    value: '15',
-    description: 'minutes'
-  },
-  {
-    key: '30',
-    text: '30',
-    value: '30',
-    description: 'minutes'
-  },
-  {
-    key: '45',
-    text: '45',
-    value: '45',
-    description: 'minutes'
-  },
-  {
-    name: 'duration',
-    key: '1',
-    text: '1',
-    value: '1',
-    description: 'hour'
-  },
-]
+//     const durationOptions = [
+//   {
+//     key: '15',
+//     text: '15',
+//     value: '15',
+//     description: 'minutes'
+//   },
+//   {
+//     key: '30',
+//     text: '30',
+//     value: '30',
+//     description: 'minutes'
+//   },
+//   {
+//     key: '45',
+//     text: '45',
+//     value: '45',
+//     description: 'minutes'
+//   },
+//   {
+//     name: 'duration',
+//     key: '1',
+//     text: '1',
+//     value: '1',
+//     description: 'hour'
+//   },
+// ]
 
     const radioStyle = {
       marginLeft: '10px',
