@@ -18,6 +18,11 @@ import DirectMessages from './DirectMessages';
 import Chatroom from './ChatRoom';
 import PersonalChatroom from './PersonalChatroom';
 import UserProfile from './UserProfile';
+import Moment from 'react-moment';
+import 'moment-timezone';
+import moment from 'moment'
+
+
 
 
 
@@ -38,7 +43,9 @@ class App extends Component {
 
 
   render() {
-
+    
+    let a = moment().format();
+    console.log(a, 'Moment')
 
     return (
       <div className="App">
@@ -51,7 +58,10 @@ class App extends Component {
           <Route exact path="/logout" component={Logout} />
           <Route exact path="/login" component={Login} />
           <Route exact path='/signup' component={Signup} />
-          <Route exact path="/" component={MainComponent} />
+          <Route
+            exact path='/' 
+            render={(props) => <MainComponent  {...props} />}
+          />
           <Route exact path='/mathematics' component={Mathematics} />
           <Route exact path='/books' component={Books} />
           <Route exact path='/philosophy' component={Philosophy} />

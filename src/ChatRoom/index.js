@@ -23,7 +23,7 @@ class ChatRoom extends Component {
   render(){
 
 
-    return (
+    return ( 
       <div>
         <ChatDisplay messages={this.state.messages}/>
       </div>

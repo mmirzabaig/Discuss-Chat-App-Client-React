@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Header, Image, Modal, Input, Form, Dropdown } from 'semantic-ui-react'
 import { socket } from '../index';
+import swal from '@sweetalert/with-react';
+
 
 class CreatePost extends Component {
   constructor(){
@@ -43,9 +45,11 @@ class CreatePost extends Component {
         cronTime: cronTime,
         cronDestroyTime: cronDestroyTime
       })
-      await console.log(this.state, 'STATE FUCKER')
+      await console.log(this.state, 'OJOJJOJOJOJO')
       await socket.emit('createNewPost', this.state)
-    } catch (err) {
+      swal('Your Post Has Been Created, You Will Get A Message When Someone Respond')
+      // this.props.resetForm()
+      } catch (err) {
       console.log(err);
       return(err);
     }
@@ -53,7 +57,7 @@ class CreatePost extends Component {
 
   render(){
 
-
+    console.log(this.props.history, 'HISTORY')
 
 
     const buttonStyle =  {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Header, Image, Modal, Input, Form, Card} from 'semantic-ui-react'
 import { socket } from '../../index';
+import swal from 'sweetalert';
 
 class ViewRequests extends Component {
   constructor(){
@@ -16,7 +17,7 @@ class ViewRequests extends Component {
   handleClick = (e, id) => {
     e.preventDefault();
     socket.emit('handleChosen', id.id);
-
+    swal('Congratulations, Your Chat Has Been Scheduled!')
   }
 
 

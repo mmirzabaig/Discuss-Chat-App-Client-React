@@ -35,7 +35,6 @@ class DisplayPrivateChat extends Component {
         <Form onSubmit={this.handleSubmit}>
           <Form.Input type='text' value={this.state.messageValue} onChange={this.handleChange}/>
         </Form>
-        <AudioVideo roomID={this.props.roomID}/>
         <ul>
           {messages}
         </ul>
